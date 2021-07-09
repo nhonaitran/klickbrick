@@ -9,6 +9,7 @@ python = "^3.9"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
+coverage = "^5.5"
 
 [tool.poetry.scripts]
 klickbrick = "klickbrick.__main__:main"

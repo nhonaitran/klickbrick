@@ -8,5 +8,4 @@ install:
     - poetry install
 # command to run tests
 script:
-    - poetry run klickbrick test
-    - poetry run coverage run --source=klickbrick -m unittest discover -b
+    - poetry run coverage run -m pytest
