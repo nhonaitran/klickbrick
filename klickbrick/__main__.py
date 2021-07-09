@@ -1,3 +1,4 @@
+""" Main Module - CLI program entry """
 ###
 ###
 # nhonaitran@NhonAis-Air  ~/src/klickbrick   master ●  poetry run klickbrick -h
@@ -19,15 +20,22 @@
 # args: Namespace(hello='hello', name='Ai')
 # hello, Ai
 #
-# sys.argv: List[str] - a list of elements that go after the 'poetry run' command. notice it includes the program/script name
-# args: Namespace -  an instance of Namespace whose properties are the positional and optional arguments parsed from sys.argv
+# sys.argv: List[str] - a list of elements that go after the 'poetry run'
+#   command. notice it includes the program/script name
+# args: Namespace -  an instance of Namespace whose properties are the
+#   positional and optional arguments parsed from sys.argv
 ###
 ###
 
 import argparse
 import sys
 
+
 def parse_args(args):
+    """Return Namespace instance containing properties arsed from the arguments list
+    :param args: list of arguments provided by the user
+    :return Namespace
+    """
     parser = argparse.ArgumentParser()
 
     parser.add_argument('hello', type=str, help='Greeting command')
@@ -37,9 +45,12 @@ def parse_args(args):
 
 
 def greet_message(hello, name):
+    """Return the greeting message built from hello command and user-provided name"""
     return f"{hello}, {name}"
 
+
 def main():
+    """Program entry point"""
     args = parse_args(sys.argv[1:])
 
     if args.hello:
@@ -48,4 +59,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
