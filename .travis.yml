@@ -1,8 +1,12 @@
 language: python
 python:
     - "3.9"
+before_install:
+    - pip install poetry
 # command to install dependencies
 install:
     - poetry install
 # command to run tests
-script: python -m unittest
+script:
+    - poetry run klickbrick test
+    - poetry run coverage run --source=klickbrick -m unittest discover -b
