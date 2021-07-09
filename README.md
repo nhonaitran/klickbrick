@@ -1,4 +1,4 @@
-# klickbrick
+# klickbrick  [![Build Status](https://travis-ci.com/nhonaitran/klickbrick.svg?branch=master)](https://travis-ci.com/nhonaitran/klickbrick)
 
 Sample CLI python program developed as learning tool
 of python language.
